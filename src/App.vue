@@ -1,19 +1,23 @@
 <template>
-  <!-- <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-  <Hooks />
+ <div id="app">
+   <message v-if="showMsg" msg="vue.js lifecycle hooks"></message>
+  <button @click="showMsg = false">Hide message</button>
+ </div>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
-import Hooks from './components/Hooks'
+import Message from './components/Message';
 export default {
-  name: 'App',
+  name:'App',
   components: {
-    // HelloWorld
-    Hooks
+    Message
+  },
+  data(){
+    return{ 
+      showMsg: true
+    }
   }
-}
+};
 </script>
 
 <style>
