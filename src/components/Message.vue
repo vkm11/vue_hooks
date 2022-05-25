@@ -33,7 +33,7 @@ export default {
   },
   updated() {
     console.log("updated");
-  },
+  },                                                   
 
 //   Good it will be shown to the console
   beforeUnmount(){
